@@ -1,0 +1,340 @@
+/* Setting the variables for colors and screen widths */
+:root {
+  --main-background: #ff0;
+  --primary-color: #b8b800;
+  --dark-color: #444;
+  --light-color: #f4f4f4;
+  --max-width: 1200px;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--main-background);
+  line-height: 1.4;
+  font-family: "Quicksand", sans-serif;
+  color: var(--dark-color);
+}
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+#showcase {
+  max-width: var(--max-width);
+  margin: auto;
+}
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+.section-title {
+  color: var(--dark-color);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+
+  text-shadow: 5px 5px 3px var(--primary-color);
+  font-weight: bold;
+}
+
+/* Header */
+/* Navbar */
+
+#logo {
+  padding: 1rem;
+  font-size: 3.5rem;
+  text-shadow: 5px 5px 3px var(--primary-color);
+}
+nav {
+  background: var(--main-background);
+  font-family: "Quicksand", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+#nav-bar .container {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav-bar ul {
+  display: flex;
+}
+#nav-bar ul li {
+  margin-right: 1rem;
+}
+#nav-bar ul li a {
+  font-size: 1.4rem;
+
+  padding: 1rem 0.5rem;
+}
+#nav-bar ul li a:hover {
+  box-shadow: 2px 2px 3px var(--primary-color), -2px -2px 3px var(--light-color);
+}
+
+/* About Me */
+
+#about-me {
+  padding-left: 1rem;
+  /* max-width: var(--max-width); */
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "pesonal-info photo skills"
+    "about about skills";
+  /* padding: 0 2rem; */
+  overflow: hidden;
+  /* justify-content: end; */
+}
+#skills-languages {
+  grid-area: skills;
+}
+#photo {
+  grid-area: photo;
+  align-self: center;
+}
+#skills-languages {
+  /* background: var(--dark-color); */
+  color: var(--dark-color);
+  padding: 1rem;
+}
+#skills {
+  margin-bottom: 2rem;
+}
+#skills ul li {
+  margin-top: 0.5rem;
+}
+
+#languages .progress {
+  overflow: hidden;
+  height: 20px;
+  background: var(--light-color);
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0.5px 1px var(--dark-color);
+}
+#languages .progress div {
+  height: 100%;
+
+  text-align: center;
+  background: var(--dark-color);
+}
+#about-me-text {
+  grid-area: about;
+  padding: 1rem 2rem;
+}
+
+#personal-info {
+  padding-top: 6rem;
+  font-size: 1.3rem;
+  line-height: 1.6;
+}
+#personal-info .personal {
+  margin-bottom: 1rem;
+}
+#personal-info .social {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+}
+#personal-info .social a {
+  margin-right: 1rem;
+}
+#personal-info .social a:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+#about-me-text p {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  text-align: justify;
+  font-style: italic;
+}
+
+/* Work Experience */
+
+#work-experience ul {
+  padding: 20px 0;
+}
+/* Creating a line in the middle */
+#work-experience ul li {
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: var(--dark-color);
+}
+/* The box with each experience */
+#work-experience ul li div {
+  position: relative;
+  bottom: 0;
+  padding: 1rem;
+  width: 400px;
+  background: var(--dark-color);
+  color: var(--light-color);
+}
+/* Alternate the position of the boxes left and right */
+#work-experience ul li:nth-child(odd) div {
+  left: 40px;
+}
+#work-experience ul li:nth-child(even) div {
+  left: -434px;
+}
+
+/* Creating a small ball on the line to resemble a date */
+#work-experience ul li:after {
+  content: "";
+  position: absolute;
+  left: -150%;
+  bottom: 0;
+  height: 25px;
+  width: 25px;
+  background: inherit;
+  border-radius: 50%;
+}
+/* Arrows pointing towards the ball from each side */
+#work-experience ul li div:before {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+#work-experience ul li:nth-child(odd) div:before {
+  left: -15px;
+  border-width: 8px 16px 8px 0;
+  border-color: transparent var(--dark-color) transparent transparent;
+}
+#work-experience ul li:nth-child(even) div:before {
+  right: -15px;
+  border-width: 8px 0 8px 16px;
+  border-color: transparent transparent transparent var(--dark-color);
+}
+
+/* Education */
+#about-me {
+  margin-bottom: 2rem;
+}
+
+.education-container {
+  display: flex;
+  padding: 1rem;
+}
+#education .education-container #education-title {
+  width: 30%;
+  text-align: center;
+  padding-top: 7rem;
+  /* font-size: 1.5rem; */
+}
+#education .container .education-container .education-list {
+  padding-left: 2rem;
+
+  font-size: 1.2rem;
+}
+#education .container .education-container .education-list ul li {
+  border-bottom: 1px solid var(--dark-color);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+#education .container .education-container .education-list ul li:last-child {
+  border: none;
+}
+
+/* Footer */
+footer .footer {
+  text-align: center;
+  background: var(--dark-color);
+  color: var(--light-color);
+  padding: 1rem 0;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 916px) {
+  #nav-bar .container {
+    flex-direction: column;
+  }
+  #work-experience ul li div {
+    width: 250px;
+  }
+  #work-experience ul li:nth-child(even) div {
+    left: -278px;
+  }
+}
+@media (max-width: 800px) {
+  #personal-info {
+    font-size: 1rem;
+  }
+  #about-me-text p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 600px) {
+  #logo {
+    font-size: 2rem;
+  }
+  #nav-bar ul {
+    flex-direction: column;
+  }
+  #nav-bar ul li {
+    text-align: center;
+  }
+  #about-me {
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "pesonal-info photo"
+      "skills skills"
+      "about about";
+  }
+  #skills-languages {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .education-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #education .education-container #education-title {
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+  #about-me {
+    margin-bottom: 0;
+  }
+  .section-title {
+    font-size: 1.2rem;
+  }
+  #work-experience ul li {
+    margin-left: 6px;
+  }
+  #work-experience ul li div {
+    width: calc(100vw - 130px);
+    margin-top: 10px;
+  }
+  #work-experience ul li:nth-child(even) div {
+    left: 40px;
+  }
+  #work-experience ul li:nth-child(even) div:before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent var(--dark-color) transparent transparent;
+  }
+}
