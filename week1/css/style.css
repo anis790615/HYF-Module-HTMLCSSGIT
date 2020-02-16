@@ -296,6 +296,11 @@ footer .footer {
   #nav-bar ul li {
     text-align: center;
   }
+  #nav-bar ul li a {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+  }
   #about-me {
     grid-template-columns: 2fr 2fr;
     grid-template-rows: auto auto auto;
@@ -336,5 +341,8 @@ footer .footer {
     left: -15px;
     border-width: 8px 16px 8px 0;
     border-color: transparent var(--dark-color) transparent transparent;
+  }
+  footer .footer {
+    font-size: 1rem;
   }
 }
