@@ -1,0 +1,8 @@
+1. Create a hidden file: touch .filename
+			 echo > .filename
+   Create a hidden directory: mkdir .new_directory
+   Display all: ls -a
+2. mkdir -p folder/another_folder/one_more/enough
+3. echo second message >> file.txt
+ 
+
