@@ -84,7 +84,7 @@ nav {
   padding: 1rem 0.5rem;
 }
 #nav-bar ul li a:hover {
-  box-shadow: 2px 2px 3px var(--primary-color), -2px -2px 3px var(--light-color);
+  box-shadow: 2px 2px 3px var(--primary-color), -1px -1px 3px var(--light-color);
 }
 
 /* About Me */
