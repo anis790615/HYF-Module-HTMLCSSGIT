@@ -1,6 +1,7 @@
 /* Setting the variables for colors and screen widths */
 :root {
   --main-background: #ff0;
+  
   --primary-color: #b8b800;
   --dark-color: #444;
   --light-color: #f4f4f4;
@@ -71,6 +72,15 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+#logo-menu  {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+#logo-menu a.icon {
+  display: none;
 }
 #nav-bar ul {
   display: flex;
@@ -288,20 +298,46 @@ footer .footer {
   }
 }
 @media (max-width: 600px) {
+  
+  
   #logo {
-    font-size: 2rem;
+    font-size: 3rem;
   }
-  #nav-bar ul {
+  #nav-bar #menu-links {
+    display: none;
     flex-direction: column;
+    background: var(--main-transparent);
+    
   }
-  #nav-bar ul li {
+  
+    
+  #nav-bar .container #menu-links li {
     text-align: center;
+    
   }
   #nav-bar ul li a {
     font-size: 1.2rem;
     line-height: 1.6;
     padding: 0 0.5rem;
   }
+  #logo-menu {
+      width: 100%;
+
+  }
+  #logo-menu a.icon {
+    display: block;
+    
+  }
+  #logo-menu a.icon:focus {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 5px var(--primary-color);;
+
+  }
+    
+
+    
+    
+    
   #about-me {
     grid-template-columns: 2fr 2fr;
     grid-template-rows: auto auto auto;
