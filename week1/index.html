@@ -19,12 +19,20 @@
   <body>
     <nav id="nav-bar">
       <div class="container">
-        <h1 id="logo">Anis Alkomem</h1>
-        <ul>
+        <div id="logo-menu">
+          <h1 id="logo">Anis Alkomem</h1>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars fa-2x"></i>
+          </a>
+
+
+        </div>
+        <ul id="menu-links" onclick="myFunction()">
           <li><a href="#about-me">About Me</a></li>
           <li><a href="#education-list">Education</a></li>
           <li><a href="#work-experience">Work Experience</a></li>
         </ul>
+        
       </div>
     </nav>
     <header>
@@ -67,7 +75,7 @@
             </div>
           </div>
           <div id="photo" class="photo">
-            <img src="img/profile3.png" alt="" width="100%" />
+            <img src="/img/profile3.png" alt="" width="100%" />
           </div>
           <div id="personal-info">
             <ul class="personal">
@@ -76,11 +84,11 @@
               <li><b>Date of Birth: </b>June 15th 1979</li>
               <li>
                 <b>Email: </b
-                ><a href="mailto:anis.al****m@gmail.com"
-                  >anis.al****m@gmail.com</a
+                ><a href="mailto:anis.alkumaim@gmail.com"
+                  >anis.alkumaim@gmail.com</a
                 >
               </li>
-              <li><b>Phone number: </b>(31) 06********</li>
+              <li><b>Phone number: </b>(31) 0657524429</li>
             </ul>
             <div class="social">
               <a
@@ -213,5 +221,16 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function myFunction() {
+  var x = document.getElementById("menu-links");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+}
+    </script>
   </body>
 </html>
